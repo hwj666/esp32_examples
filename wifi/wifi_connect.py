@@ -11,7 +11,8 @@ def wifiConnect(ssid, password):
         wifi.connect(ssid, password)
         while not wifi.isconnected():
             time.sleep(1)
-            
+    if wifi.isconnected():
+        print('network config:', wifi.ifconfig())            
 wifiConnect(ssid,passwd)
 
 
